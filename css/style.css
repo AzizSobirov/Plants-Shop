@@ -29,6 +29,7 @@ ul {
 input, select, button {
   border: none;
   outline: none;
+  background: transparent;
 }
 
 b {
@@ -115,7 +116,7 @@ nav.bg {
 }
 
 .head_text {
-  padding: 5vh 0 0 5vw;
+  padding-left: 5vw;
   height: 100%;
 }
 
@@ -161,7 +162,7 @@ nav.bg {
 
 .sec1 {
   min-height: 100vh;
-  padding: 0 5vw;
+  padding: 5vh 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,6 +401,7 @@ footer ul li input {
             filter: invert(1);
   }
   .head {
+    padding: 0 5vw;
     background: url(../img/head-img.png) center/cover;
   }
   .head h2, .head h3, .head span h4, .head p {
@@ -407,6 +409,12 @@ footer ul li input {
   }
   .head_img-bx {
     display: none;
+  }
+  .head_text {
+    padding-left: 0;
+  }
+  .head_text-btn {
+    width: calc(100% + 5vw);
   }
   .sec1_plants-cards {
     display: -ms-grid;

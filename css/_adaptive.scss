@@ -8,12 +8,19 @@
         }
     }
     .head{
+        padding: 0 5vw;
         background:url(../img/head-img.png) center/cover;
         h2,h3,span h4,p{
             color: #fff;
         }
         &_img-bx{
             display: none;
+        }
+        &_text{
+            padding-left: 0;
+            &-btn{
+                width: calc(100% + 5vw);
+            }
         }
     }
 
