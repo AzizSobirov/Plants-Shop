@@ -1,0 +1,197 @@
+@import 'other';
+
+// navbar
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5vh 5vw;
+    width: 100%;
+    transition: 0.5s;
+    @include flexbox(space-between);
+    z-index: 3;
+    img{
+        height: 50px;
+    }
+    ul{
+        @include flexbox;
+        li{
+            cursor: pointer;
+            &:not(:last-child){
+                margin-right:30px;
+            }
+        }
+    }
+}
+nav.bg{
+    padding: 10px 5vw;
+    background: #fff;
+}
+
+// header
+.head{
+    min-height: 100vh;
+    @include flexbox;
+    &_img-bx img{
+        height: 100vh;
+    }
+    &_text{
+        padding:5vh 0 0 5vw;
+        height: 100%;
+        h2{
+            font-size: 3em;
+            color: $mc;
+        }
+        &-btn{
+            margin-top: 100px;
+            width: 100%;
+            @include flexbox;
+            span{
+                cursor: pointer;
+                width: 50%;
+                padding: 30px;
+                &:last-child{
+                    background: $mc;
+                    color: #fff;
+                    h4{
+                        color: #bebebe;
+                    }
+                }
+                h4{
+                    margin-bottom: 10px;
+                    font-weight: 400;
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+// section one
+
+.sec1{
+    min-height: 100vh;
+    padding: 0 5vw;
+    @include flexbox;
+    flex-direction: column;
+    &-bx{
+        @include grid(1fr 1fr 1fr 1fr,1fr);
+        p{
+            margin-top: 10px;
+            color: #000000b4;
+            text-indent: 5px;
+        }
+    }
+    &_plants{
+        width: 100%;
+        margin-top: 100px;
+        &-head{
+            padding: 10px 0;
+            width: 100%;
+            margin-bottom: 50px;
+            box-shadow:0 3px 0 #f1f1f1;
+            @include flexbox(space-between);
+        }
+        &-cards{
+            @include grid(1fr 1fr 1fr 1fr 1fr 1fr,1fr);
+            .card{
+                position: relative;
+                top: 0;
+                text-align: center;
+                cursor: pointer;
+                @include flexbox;
+                flex-direction: column;
+                transition: 0.5s;
+                &-img{
+                    background: #f1f1f1;
+                    overflow: hidden;
+                    @include flexbox;
+                    align-items: flex-end;
+                    img{width: 100%;}
+                }
+                p{
+                    margin: 10px 0;
+                }
+                &:hover{
+                    top: -10px;
+                }
+            }
+        }
+    }
+}
+
+// section two
+
+.sec2{
+    min-height: 100vh;
+    padding: 0 5vw;
+    @include flexbox;
+    &_part1{
+        padding: 0 20px 0 0;
+        h2{
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        p{
+            color: #00000080;
+        }
+        &-img{
+            margin-top: 100px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// section three
+
+footer{
+    padding: 0 5vw;
+    width: 100%;
+    min-height: 100vh;
+    @include flexbox(space-around);
+    flex-direction: column;
+    .bx{
+        width: 100%;
+        background: #F3F4F6;
+        padding: 0 5vw;
+        @include flexbox(space-between);
+        border-radius: 20px;
+        h2{
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+    }
+    ul{
+        padding: 10px;
+        box-shadow: 0 -3px 0 #f1f1f1;
+        width: 100%;
+        @include flexbox(space-between);
+        li{
+            h3{
+                margin: 10px 0;
+                color: $mc;
+                text-transform: uppercase;
+            }
+            h4{
+                margin: 5px 0;
+            }
+            a{
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                color: #00000080;
+            }
+            input{
+                margin: 10px 0;
+                padding: 5px;
+                box-shadow: 0 0 0 1.5px $mc;
+            }
+        }
+    }
+}
+
+@import 'adaptive';

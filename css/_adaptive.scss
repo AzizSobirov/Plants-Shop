@@ -1,0 +1,73 @@
+@media (max-width:1024px){
+    nav h3,nav h4{
+        color: #fff !important;
+    }
+    nav.bg{
+        li:not(:last-child){
+            filter: invert(1);
+        }
+    }
+    .head{
+        background:url(../img/head-img.png) center/cover;
+        h2,h3,span h4,p{
+            color: #fff;
+        }
+        &_img-bx{
+            display: none;
+        }
+    }
+
+    .sec1_plants-cards{
+        @include grid(1fr 1fr 1fr,1fr 1fr);
+    }
+}
+
+@media (max-width:758px){
+    nav li:nth-child(1),nav li:nth-child(2){
+        display: none;
+    }
+    .sec1{
+        &-bx{
+            @include grid;
+        }
+        &_plants-cards{
+            @include grid;
+            .card{
+                &:nth-child(odd){
+                    transform: translateY(10%);
+                }
+            }
+        }
+    }
+
+    .sec2{
+        @include flexbox(flex-start);
+        &_part1{
+            padding: 0;
+            width: 100%;
+        }
+        &_part2{
+            display: none;
+        }
+    }
+
+    footer{
+        .bx{
+            padding-top: 20px;
+            flex-direction: column;
+            h2{
+                font-size: 2em;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        ul{
+            align-items: flex-start;
+            flex-direction: column;
+            li{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
